@@ -47,14 +47,7 @@ namespace Microsoft.Bot.Builder.Dialogs
     /// </summary>
     public static partial class Conversation
     {
-        public static readonly IContainer Container;
-
-        static Conversation()
-        {
-            var builder = new ContainerBuilder();
-            builder.RegisterModule(new DialogModule_MakeRoot());
-            Container = builder.Build();
-        }
+        public static IContainer Container;
 
         /// <summary>
         /// Process an incoming message within the conversation.
